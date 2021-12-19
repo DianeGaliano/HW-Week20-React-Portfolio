@@ -1,22 +1,28 @@
 import React from 'react';
-// Here we import the Header.css file to grant access to some additional classNames
 import '../styles/Header.css';
 
-// TODO: Create a styles object called "styles"
+// By importing the Header.css file, it is added to the DOM whenever this component loads
+
+// We can also style a component inside of its JavaScript file by adding style properties to its rendered elements
+// Unlike regular HTML, a JSX style property must be an object instead of a string
+// On a style object, we camelCase all property names, and put all of the values in quotes
+// Non quoted values default to "pixels", e.g. height, margin, padding
+
 const styles = {
-  header: {
-    background: 'blue'
+  headerStyle: {
+    background: 'red',
   },
-  h1: {
-    justifyContent: 'flex-end'
+  headingStyle: {
+    fontSize: '100px',
   },
 };
-function Header() {
-  // TODO: Add a style attribute to header and the h1 element
 
+// We use JSX curly braces to evaluate the style object
+
+function Header() {
   return (
-    <header style={style.header} className="header">
-      <h1 style={style.h1} >Portfolio</h1>
+    <header style={styles.headerStyle} className="header">
+      <h1 style={styles.headingStyle}>Welcome</h1>
     </header>
   );
 }
