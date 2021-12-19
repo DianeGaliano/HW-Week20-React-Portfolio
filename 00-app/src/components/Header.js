@@ -9,12 +9,12 @@ const styles = {
     fontSize: '100px',
   },
 };
-t
+
 
 function Header() {
   return (
     <header style={styles.headerStyle} className="header">
-      <h1 style={styles.headingStyle}>Portfolio</h1>
+      <h1 style={styles.headingStyle}>Diane's Portfolio</h1>
     </header>
   );
 }
