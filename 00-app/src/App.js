@@ -1,9 +1,15 @@
-import './App.css';
-import Project from './components/Project';
+import React from "react";
+import Header from "./components/Header";
+import Project from "./components/Section";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="portfolio-app">
+    <div>
+      <Navigation />
+      <Header />
+      <Footer/>
       <Project />
     </div>
   );
