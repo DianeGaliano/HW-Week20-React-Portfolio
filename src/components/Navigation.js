@@ -1,29 +1,66 @@
 import React from 'react';
-import '../styles/Navbar.css';
-
-const styles = {
-  navbarStyle: {
-    background: 'green',
-    justifyContent: 'flex-end',
-  },
-};
 
 
-function Navbar() {
+function Navbar({ currentPage, handlePageChange }) {
   return (
-    <nav style={styles.navbarStyle} className="navbar">
-       <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <h1> Diane's Portfolio</h1>
+    <div className="header">
+    <div className="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a className="pure-menu-heading" href="#home">Diane's Portfolio</a>
 
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="#me" class="pure-menu-link">About Me</a></li>
-            <li class="pure-menu-item"><a href="#project" class="pure-menu-link">Projects</a></li>
-            <li class="pure-menu-item"><a href="/Resume.pdf" class="pure-menu-link">Resume</a></li>
-            <li class="pure-menu-item"><a href="#contact" class="pure-menu-link">Contact</a></li>
+        <ul className="pure-menu-list">
+          <li className="pure-menu-item pure-menu-selected">
+            <a
+              href="#home" 
+              onClick={() => handlePageChange('Home')}
+              className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>
+                
+              Home
+            </a>
+          </li>
+
+            <li className="pure-menu-item">
+            <a 
+              href="#me"
+              onClick={() => handlePageChange('About')} 
+              className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
+              
+              About Me
+            </a>
+          </li>
+
+          <li className="pure-menu-item">
+            <a
+              href="#project" 
+              onClick={() => handlePageChange('Projects')}
+              className="pure-menu-link">
+              
+              Projects
+            </a>
+          </li>
+
+          <li className="pure-menu-item">
+            <a
+              href="/Resume.pdf" 
+              onClick={() => handlePageChange('Resume')}
+              className="pure-menu-link">
+              
+              Resume
+            </a>
+          </li>
+
+          <li className="pure-menu-item">
+            <a
+              href="#contact"  
+              onClick={() => handlePageChange('Contact')}
+              className="pure-menu-link">
+              
+              Contact
+            </a>
+          </li>
 
         </ul>
     </div>
-    </nav>
+</div>
   );
 }
 

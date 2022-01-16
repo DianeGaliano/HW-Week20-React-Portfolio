@@ -1,11 +1,5 @@
 import React from 'react';
-import '../styles/index.css';
 
-const styles = {
-    sectionStyles: {
-        background: 'white',
-    },
-};
 
 function Project() {
     return(

@@ -1,20 +1,9 @@
 import React from 'react';
-import '../styles/Header.css';
-
-const styles = {
-  headerStyle: {
-    background: 'red',
-  },
-  headingStyle: {
-    fontSize: '100px',
-  },
-};
-
 
 function Header() {
   return (
-    <header style={styles.headerStyle} className="header">
-      <h1 style={styles.headingStyle}>Diane's Portfolio</h1>
+    <header className="header">
+      <h1>Diane's Portfolio</h1>
     </header>
   );
 }
