@@ -34,7 +34,7 @@ function Footer() {
     </button>
     </div>
     </div>
-    )
+    );
 }
 
 export default Footer;
