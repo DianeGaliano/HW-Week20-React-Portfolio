@@ -1,16 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
-import Project from "./components/Project";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div>
-      <Navigation />
-      <Header />
-      <Footer/>
-      <Project />
+      <Home />
     </div>
   );
 }
