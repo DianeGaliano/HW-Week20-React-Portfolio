@@ -31,20 +31,10 @@ function Navbar({ currentPage, handlePageChange }) {
           <li className="pure-menu-item">
             <a
               href="#project" 
-              onClick={() => handlePageChange('Projects')}
+              onClick={() => handlePageChange('Project')}
               className="pure-menu-link">
               
               Projects
-            </a>
-          </li>
-
-          <li className="pure-menu-item">
-            <a
-              href="/Resume.pdf" 
-              onClick={() => handlePageChange('Resume')}
-              className="pure-menu-link">
-              
-              Resume
             </a>
           </li>
 

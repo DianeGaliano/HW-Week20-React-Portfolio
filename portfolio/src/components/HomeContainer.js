@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Navigation from './Navigation';
 import Home from './pages/Home';
-import About from './pages/About';
+import About from './pages/AboutMe';
 import Project from './pages/Project'
-import Contact from './pages/Contact';
+import Footer from './pages/Footer';
 
 export default function HomeContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -19,7 +19,7 @@ export default function HomeContainer() {
     if (currentPage === 'Project') {
       return <Project />;
     }
-    return <Contact />;
+    return <Footer />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
